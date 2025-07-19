@@ -3,6 +3,7 @@ import { createPost, deletePost, getPost, getPosts, getUserPosts, likePost } fro
 import { protectRoute } from "../middleware/auth.middleware.js";
 import upload from "../middleware/upload.middleware.js";
 
+
 const router = express.Router();
 
 router.get('/posts', getPosts);
