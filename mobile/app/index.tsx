@@ -1,27 +1,15 @@
-import "../global.css"
-import { Text, View, StyleSheet } from "react-native";
- 
-export default function App() {
+import { View, Text, Button } from 'react-native'
+import React from 'react'
+import { useClerk } from '@clerk/clerk-expo'
+
+const HomeScreen = () => {
+  const {signOut} = useClerk();
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>
-        Welcome to Nativewind!
-      </Text>
+    <View>
+      <Text>HomeScreen</Text>
+      <Button onPress={()=>signOut} title='logout' ></Button>
     </View>
-  );
+  )
 }
 
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",       // equivalent to items-center
-    justifyContent: "center",   // equivalent to justify-center
-    backgroundColor: "white",   // equivalent to bg-white
-  },
-  title: {
-    fontSize: 20,               // text-xl ~ 20px
-    fontWeight: "bold",         // font-bold
-    color: "#3B82F6",           // text-blue-500 (Tailwind blue-500)
-  },
-});
+export default HomeScreen
