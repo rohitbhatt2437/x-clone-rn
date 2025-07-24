@@ -20,7 +20,7 @@ const TRENDING_TOPICS = [
 const SearchScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
-      {/* HEADER */}
+      {/* HEADERr */}
       <View style={styles.header}>
         <View style={styles.searchBar}>
           <Feather name="search" size={20} color="#657786" />
